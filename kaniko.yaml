@@ -23,7 +23,7 @@ spec:
         image: gcr.io/kaniko-project/executor:latest
         args: ["--dockerfile=/workspace/Dockerfile",
                "--context=/workspace",
-               "--destination=cdan/vcas-demo:$${GIT_COMMIT_ID}"]
+               "--destination=hkm30/vcas-demo:$${GIT_COMMIT_ID}"]
         volumeMounts:
           - name: workspace-vol
             mountPath: /workspace
