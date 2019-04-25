@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: kaniko-job
-  namespace: default
+  namespace: hekm-ns
 spec:
   completions: 1
   template:
@@ -34,7 +34,7 @@ spec:
         projected:
           sources:
           - secret:
-              name: docker-secret
+              name: docker-secret-hekm
               items:
               - key: .dockerconfigjson
                 path: .docker/config.json
